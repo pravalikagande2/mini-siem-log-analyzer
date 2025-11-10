@@ -1,0 +1,39 @@
+Time: 2025-01-20 10:12:55
+EventID: 4625
+User: WIN-KM72\john
+IP: 192.168.1.20
+Command: -
+
+Time: 2025-01-20 10:12:57
+EventID: 4625
+User: WIN-KM72\john
+IP: 192.168.1.20
+Command: -
+
+Time: 2025-01-20 10:13:00
+EventID: 4625
+User: WIN-KM72\john
+IP: 192.168.1.20
+Command: -
+
+Time: 2025-01-20 10:13:10
+EventID: 4624
+User: WIN-KM72\john
+IP: 192.168.1.20
+Command: -
+
+Time: 2025-01-20 11:15:50
+EventID: 4688
+User: SYSTEM
+Command: powershell -enc JABhAHAA
+
+Time: 2025-01-20 11:17:30
+EventID: 1102
+User: SYSTEM
+Command: Security log file cleared.
+
+Time: 2025-01-20 11:20:01
+EventID: 7045
+User: SYSTEM
+Command: New Service Installed: UpdaterService
+

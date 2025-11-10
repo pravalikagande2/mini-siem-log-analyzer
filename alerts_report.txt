@@ -1,0 +1,4 @@
+[HIGH] Possible Brute Force Attack from IP 192.168.1.20 (3 failed logins)
+[HIGH] Suspicious PowerShell command: powershell -enc JABhAHAA
+[HIGH] Event Log Cleared at 2025-01-20 11:17:30
+[MEDIUM] New Service Installed: New Service Installed: UpdaterService
