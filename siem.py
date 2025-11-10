@@ -1,5 +1,3 @@
-# siem.py
-
 from parser.windows_parser import parse_log_line
 from detectors.brute_force import detect_bruteforce
 from detectors.powershell import detect_suspicious_powershell
@@ -17,9 +15,7 @@ HTML_OUT = "report/alerts_report.html"
 TXT_OUT = "alerts_report.txt"
 
 
-# --------------------------
-# Read & Parse Logs
-# --------------------------
+
 def read_logs(file):
     with open(file, "r", encoding="utf-8") as f:
         blocks = f.read().strip().split("\n\n")
@@ -32,18 +28,14 @@ def read_logs(file):
     return events
 
 
-# --------------------------
-# Write TEXT Report
-# --------------------------
+
 def write_text_report(alerts):
     with open(TXT_OUT, "w", encoding="utf-8") as f:
         for alert in alerts:
             f.write(alert + "\n")
 
 
-# --------------------------
-# Write HTML Report
-# --------------------------
+
 def write_html_report(alerts):
     high = sum(1 for a in alerts if "[HIGH]" in a)
     medium = sum(1 for a in alerts if "[MEDIUM]" in a)
@@ -104,7 +96,7 @@ Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%SZ')} (UTC)
 <ul>
 """
 
-    # Insert alerts
+   
     for alert in alerts:
         if "[HIGH]" in alert:
             html += f"<li class='high'>{alert}</li>\n"
@@ -119,7 +111,7 @@ Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%SZ')} (UTC)
 </html>
 """
 
-    # Make sure folder exists
+    
     folder = os.path.dirname(HTML_OUT)
     if folder and not os.path.exists(folder):
         os.makedirs(folder)
@@ -131,9 +123,8 @@ Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%SZ')} (UTC)
 
 
 
-# --------------------------
+
 # Console Output
-# --------------------------
 def pretty_print(alerts):
     print(Fore.CYAN + "\n==== ALERTS ====\n" + Style.RESET_ALL)
 
@@ -146,9 +137,8 @@ def pretty_print(alerts):
             print(Fore.GREEN + alert + Style.RESET_ALL)
 
 
-# --------------------------
+
 # Main Function
-# --------------------------
 def main():
     events = read_logs(LOG_FILE)
 

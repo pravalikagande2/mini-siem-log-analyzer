@@ -2,7 +2,7 @@ def detect_bruteforce(events):
     failed_attempts = {}
 
     for event in events:
-        if event.get("event_id") == 4625:  # failed logon
+        if event.get("event_id") == 4625:  
             ip = event.get("ip", "")
             failed_attempts[ip] = failed_attempts.get(ip, 0) + 1
 
