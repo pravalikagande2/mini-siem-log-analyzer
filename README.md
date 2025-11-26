@@ -112,3 +112,11 @@ Implementation of basic SIEM-like detection rules
 Generating meaningful alerts for security monitoring
 
 Familiarity with attacker behaviors such as brute force attempts and malicious PowerShell
+
+===========================================================================================
+
+<img width="2879" height="1346" alt="image" src="https://github.com/user-attachments/assets/45fd52d9-a623-4b0a-8007-88d072dde1ab" />
+
+<img width="2422" height="468" alt="image" src="https://github.com/user-attachments/assets/955299de-df57-4146-b01a-96dca3cabc9f" />
+
+
